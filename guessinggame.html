@@ -1,0 +1,52 @@
+<script type="text/javascript">
+
+// Asks the user to guess how many states I, the developer, 
+// have lived in.  The user keeps guessing with guidance 
+// until they get the right answer.  Once the user gets the
+// right answer they will be asked to guess one of the states 
+// I have lived in.  The user gets one shot to correctly guess
+// one of the states I have lived in.
+
+// Prompt the user for their guess
+var userGuess = prompt("How many states have I lived in?");
+console.log("The user guessed" + userGuess);
+
+var answer = 7;
+
+// Make the user keep guessing until they get it right.
+// Hints are offered.
+while (userGuess != answer) {
+	if (userGuess <= 6) {
+		var userGuess = prompt("That's a little too low.  Try again.");
+	} else if (userGuess >= 8) {
+		var userGuess = prompt("That's a bit too high.  Guess again.");
+	}
+}
+
+// Once the user gets the right answer they're asked to name
+// one of the states I've lived in.  They get one chance.
+var stateGuess = prompt("Congrats!  You guessed the right answer!  Can you name one of the states I lived in?");
+
+var states = ["michigan", "maryland", "virginia", "new york", "colorado", "alaska", "washington" ]
+
+
+// Idea to write this search function from http://stackoverflow.com/questions/143847/best-way-to-find-an-item-in-a-javascript-array
+// and from the codecademy homework.
+
+function include(array1, string1) {
+	for (var i = 0; i < array1.length; i++) {
+		if (string1.toLowerCase() == array1[i]) {
+		return true;
+		}
+	}
+}
+
+// call the 'include' function to see if the guess is in the array of right
+// answers.
+if (include(states,stateGuess)) {
+	alert("Yup.  I've lived there!");
+} else {
+	alert("I haven't lived there yet but perhaps some day I will.");
+}
+
+</script>
