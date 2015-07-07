@@ -1,9 +1,9 @@
 <script type="text/javascript">
 
-// Asks the user to guess how many states I, the developer, 
-// have lived in.  The user keeps guessing with guidance 
+// Asks the user to guess how many states I, the developer,
+// have lived in.  The user keeps guessing with guidance
 // until they get the right answer.  Once the user gets the
-// right answer they will be asked to guess one of the states 
+// right answer they will be asked to guess one of the states
 // I have lived in.  The user gets one shot to correctly guess
 // one of the states I have lived in.
 
@@ -12,20 +12,29 @@ var userGuess = prompt("How many states have I lived in?");
 console.log("The user guessed" + userGuess);
 
 var answer = 7;
-
+var numbTries = 1;
+var message;
 // Make the user keep guessing until they get it right.
 // Hints are offered.
-while (userGuess != answer) {
+while (userGuess != answer && numbTries <= 5) {
 	if (userGuess <= 6) {
 		var userGuess = prompt("That's a little too low.  Try again.");
 	} else if (userGuess >= 8) {
 		var userGuess = prompt("That's a bit too high.  Guess again.");
 	}
+	numbTries +1;
 }
+
+if (userGuess >=5){
+		message = "The right answer is 7, Can you name one of the states?";
+}else {
+		message = "Are you a stalker? You are correct. Can you name one of the states?";
+}
+
 
 // Once the user gets the right answer they're asked to name
 // one of the states I've lived in.  They get one chance.
-var stateGuess = prompt("Congrats!  You guessed the right answer!  Can you name one of the states I lived in?");
+var stateGuess = prompt(message);
 
 var states = ["michigan", "maryland", "virginia", "new york", "colorado", "alaska", "washington" ]
 
@@ -48,5 +57,6 @@ if (include(states,stateGuess)) {
 } else {
 	alert("I haven't lived there yet but perhaps some day I will.");
 }
+
 
 </script>
