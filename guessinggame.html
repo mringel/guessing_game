@@ -14,6 +14,7 @@ console.log("The user guessed" + userGuess);
 var answer = 7;
 var numbTries = 1;
 var message;
+
 // Make the user keep guessing until they get it right.
 // Hints are offered.
 while (userGuess != answer && numbTries <= 5) {
@@ -22,7 +23,7 @@ while (userGuess != answer && numbTries <= 5) {
 	} else if (userGuess >= 8) {
 		var userGuess = prompt("That's a bit too high.  Guess again.");
 	}
-	numbTries +1;
+	numbTries +=1;
 }
 
 if (userGuess >=5){
@@ -39,9 +40,7 @@ var stateGuess = prompt(message);
 var states = ["michigan", "maryland", "virginia", "new york", "colorado", "alaska", "washington" ]
 
 
-// Idea to write this search function from http://stackoverflow.com/questions/143847/best-way-to-find-an-item-in-a-javascript-array
-// and from the codecademy homework.
-
+//Search array for given string
 function include(array1, string1) {
 	for (var i = 0; i < array1.length; i++) {
 		if (string1.toLowerCase() == array1[i]) {
