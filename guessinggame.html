@@ -4,7 +4,7 @@ var Game = function() {
   this.attempts = 5;
   this.answer = "7";
   this.makeGuess = function() {
-    this.lastGuess = prompt('How many states have I lived in');
+    this.lastGuess = prompt('How many states have I lived in?');
     this.guesses++;
     return this.lastGuess;
   };
@@ -17,7 +17,7 @@ while(game.guesses < game.attempts && guess != game.answer) {
     game.message ='Are you a stalker? You are correct. Can you name one of the states?';
   }
   else if (game.guesses === game.attempts){
-    game.message = "The right answer is 7. Can you name one of the states I've lived in?";
+    game.message = "The right answer is 7. Can you name one of the 7 states I've lived in?";
   }
 
   else if (guess < game.answer) {
