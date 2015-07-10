@@ -1,62 +1,42 @@
-<script type="text/javascript">
+<!doctype html>
+	<html>
+		<head>
+		 <title><b>Guessing My Concert Attendance in 2015</b></title>
+		 </head>
 
-// Asks the user to guess how many states I, the developer,
-// have lived in.  The user keeps guessing with guidance
-// until they get the right answer.  Once the user gets the
-// right answer they will be asked to guess one of the states
-// I have lived in.  The user gets one shot to correctly guess
-// one of the states I have lived in.
+			<body>
+			<h1 style ="font-family:Arial;color:Orange;font-size:64px"><em>Have You Been Stalking Me?</em>The Guessing Game Based On My Concert Attendance in 2015</h1>
+				
+				<img src="http://www.mikemezphotography.com/wp-content/uploads/2014/11/Slipknot-10.jpg" height="300px" width="500px"/>
+				
+				<a href="http://www.google.com">Google</a>
+				<p id="result" style="color:Pink;font-stlye:serif;font-size:42px"></p>
 
-// Prompt the user for their guess
-var userGuess = prompt("How many states have I lived in?");
-console.log("The user guessed" + userGuess);
+			
+			<h2 style ="color:Red"><i>How Does My Game Work You Might Ask?</i></h2>
+					<p>The games starts with the prompt asking the player to take a stab at how the number of concerts I, the gamemaker, have attended in 2015. If the player is incorrect, the player will be asked to choose again. The player has 4 chances to choose the correct amount of concerts. Don't fret young padawin, there are several hints that are displayed after every wrong answer. These prompts will let you know if you are guessing too high or too low. So now that you know the rules, are you a terrible friend or are you a <b>STALKER?</b>
+ 					</p>
+ 			
+ 			<h3 style ="color:Green"><i>List Of Guesses When You Answer Wrong</i></h3>
+ 			  
+ 			  <ul>
+ 			  	
+ 			  	<li>If the player guesses too low, they are prompted with a Mr.T type prompt</li>
+ 			  		<img src="http://spinoff.comicbookresources.com/wp-content/uploads/2014/06/mr-t.jpeg" height="300px" width="500px"/>
+ 			  	<li id="high">If the player guesses too high, they are prompted with a Cold Pop type prompt</li>
+ 			  	  <img src="http://img.memecdn.com/ain-amp-039-t-nobody-got-time-for-that_o_1582005.jpg" height="300px" width="500px"/>
+ 			  
+ 			  </ul>
+ 			  
+ 			  	
+ 			 
+ 			  		<img src="http://i17.tinypic.com/2z65p2q.jpg" height="300px" width="500px"/>
 
-var answer = 7;
-var numbTries = 1;
-var message;
-// Make the user keep guessing until they get it right.
-// Hints are offered.
-while (userGuess != answer && numbTries <= 5) {
-	if (userGuess <= 6) {
-		var userGuess = prompt("That's a little too low.  Try again.");
-	} else if (userGuess >= 8) {
-		var userGuess = prompt("That's a bit too high.  Guess again.");
-	}
-	numbTries +1;
-}
+ 			<h4 style ="color:Blue;font-size:62px"><i>Are You Brave Enough To Play?</i>
 
-if (userGuess >=5){
-		message = "The right answer is 7, Can you name one of the states?";
-}else {
-		message = "Are you a stalker? You are correct. Can you name one of the states?";
-}
-
-
-// Once the user gets the right answer they're asked to name
-// one of the states I've lived in.  They get one chance.
-var stateGuess = prompt(message);
-
-var states = ["michigan", "maryland", "virginia", "new york", "colorado", "alaska", "washington" ]
+ 			<script src="guessinggame.js"></script>
 
 
-// Idea to write this search function from http://stackoverflow.com/questions/143847/best-way-to-find-an-item-in-a-javascript-array
-// and from the codecademy homework.
+		</head>
+	</html>
 
-function include(array1, string1) {
-	for (var i = 0; i < array1.length; i++) {
-		if (string1.toLowerCase() == array1[i]) {
-		return true;
-		}
-	}
-}
-
-// call the 'include' function to see if the guess is in the array of right
-// answers.
-if (include(states,stateGuess)) {
-	alert("Yup.  I've lived there!");
-} else {
-	alert("I haven't lived there yet but perhaps some day I will.");
-}
-
-
-</script>
