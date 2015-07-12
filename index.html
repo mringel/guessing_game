@@ -22,22 +22,30 @@
 		</div>
 
 		<div id="intro">
-			<p>During my long long life here on this planet I've lived in various states in the US for school, work, and play.  This game will test you to see if you can guess how many and which ones.  Here are some hints.  I went to school at <abbr title="Yes there really is a Kalamazoo.">Kalamazoo College</abbr> and I worked for <abbr title="National Oceanic and Atmospheric Administration">NOAA</abbr> for ten years.
+			<p>During my long long life here on this planet I've lived in various states in the US for school, work, and play.  This game will test you to see if you can guess how many different states I've lived in.  Click the button below when you're ready to guess!
 			</p>
 		</div>
 
-		<div id="game">
+		<div id="game" align = "center">
 
-			<p>A button or something to launch the guessing game will go here.</p>
+			<button type="button" onclick="game.run()">Click Me!</button>
 
-			<img src="images/BlankMap-USA-states.PNG" alt="greyscale map of the United States" title="No, Alaska is not an island"/>
+			<p id="query"></p>
+
+			<table id = "stateTable">
+
+			</table>
+
 
 		</div>
 
+		<div id="map" align="center">
 
+			<img src="images/BlankMap-USA-states.PNG" alt="greyscale map of the United States" title="No, Alaska is not an island"/>
 
+		</div>	
 
-
+			<script src="js/game.js"></script>
 
 	</body>
 
